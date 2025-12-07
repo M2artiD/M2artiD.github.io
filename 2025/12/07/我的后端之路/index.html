@@ -1,0 +1,657 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我的后端之路 | M2artiD</title><meta name="author" content="M2artiD"><meta name="copyright" content="M2artiD"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="今天是学习Java 的第一天,怀揣着紧张和激动的心情,踏上了这条后端开发员的道路(笑)加油**话说,有c plus plus,以及Linux基础的我,应该还算能打(大概)#今天稍稍了解了一下软件和硬件的基础知识,大致上掌握的还不错.(其实想弄一下,,听课时的截图的,太烂了,遂不弄了) 预科小知识1-对于计算机的快捷按键我大致比较熟悉,快速的略过了 2-快捷键易如反掌 3-Dos命令    md&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的后端之路">
+<meta property="og:url" content="http://example.com/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/index.html">
+<meta property="og:site_name" content="M2artiD">
+<meta property="og:description" content="今天是学习Java 的第一天,怀揣着紧张和激动的心情,踏上了这条后端开发员的道路(笑)加油**话说,有c plus plus,以及Linux基础的我,应该还算能打(大概)#今天稍稍了解了一下软件和硬件的基础知识,大致上掌握的还不错.(其实想弄一下,,听课时的截图的,太烂了,遂不弄了) 预科小知识1-对于计算机的快捷按键我大致比较熟悉,快速的略过了 2-快捷键易如反掌 3-Dos命令    md&amp;l">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg">
+<meta property="article:published_time" content="2025-12-07T13:10:01.000Z">
+<meta property="article:modified_time" content="2025-12-07T13:12:56.682Z">
+<meta property="article:author" content="M2artiD">
+<meta property="article:tag" content="学习,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我的后端之路",
+  "url": "http://example.com/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/",
+  "image": "http://example.com/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg",
+  "datePublished": "2025-12-07T13:10:01.000Z",
+  "dateModified": "2025-12-07T13:12:56.682Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "M2artiD",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/images/favicon.jpg"><link rel="canonical" href="http://example.com/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=5.5.3-b2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的后端之路',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/images/favicon.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/images/logo.jpg" alt="Logo"><span class="site-name">M2artiD</span></a><a class="nav-page-title" href="/"><span class="site-name">我的后端之路</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我的后端之路</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-07T13:10:01.000Z" title="发表于 2025-12-07 21:10:01">2025-12-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-07T13:12:56.682Z" title="更新于 2025-12-07 21:12:56">2025-12-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="今天是学习Java-的第一天-怀揣着紧张和激动的心情-踏上了这条后端开发员的道路-笑"><a href="#今天是学习Java-的第一天-怀揣着紧张和激动的心情-踏上了这条后端开发员的道路-笑" class="headerlink" title="今天是学习Java 的第一天,怀揣着紧张和激动的心情,踏上了这条后端开发员的道路(笑)"></a>今天是学习Java 的第一天,怀揣着紧张和激动的心情,踏上了这条后端开发员的道路<del>(笑)</del></h2><h2 id="加油"><a href="#加油" class="headerlink" title="加油"></a><em>加油</em></h2><p>**话说,有c plus plus,以及Linux基础的我,应该还算能打(大概)<br>#今天稍稍了解了一下软件和硬件的基础知识,大致上掌握的还不错.<del>(其实想弄一下,,听课时的截图的,太烂了,遂不弄了)</del></p>
+<h2 id="预科小知识"><a href="#预科小知识" class="headerlink" title="预科小知识"></a>预科小知识</h2><pre><code>1-对于计算机的快捷按键我大致比较熟悉,快速的略过了
+2-快捷键易如反掌
+3-Dos命令
+   md&lt;目录名&gt;
+   rd目录名&gt;
+   cd &gt; &lt;文件名&gt;
+   del  &lt;文件名&gt;
+</code></pre>
+<h2 id="卸载JDK"><a href="#卸载JDK" class="headerlink" title="卸载JDK"></a>卸载JDK</h2><p>   1-删除Java的安装目录<br>   2-删除Java_HOME<br>   3-删除path下关于Java的目录<br>   4-java-version(命令行检测是否完全删除)</p>
+<h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><pre><code>1-官网下载
+2-同意协议
+3-下载对应版本(17为ds推荐,8则是公司会用(?))
+4-记住安装路径 C:\Program Files\Java\jdk-17(个人习惯,避免权限问题,开发工具识别等) 
+5-配置环境变量(java bin)
+6-环境变量--&gt;Java-HOME(路径同上)
+7-测试JDK是否安装成功
+  1.打开cmd  //输入java -version
+</code></pre>
+<h2 id="骗你你呀-立刻切换为python形态"><a href="#骗你你呀-立刻切换为python形态" class="headerlink" title="骗你你呀.立刻切换为python形态!"></a>骗你你呀.立刻切换为python形态!</h2><h2 id="基于python"><a href="#基于python" class="headerlink" title="基于python"></a>基于python</h2><hr>
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><h2 id="花括号的作用"><a href="#花括号的作用" class="headerlink" title="*花括号的作用"></a>*花括号的作用</h2><h2 id="1-变量名-插入为变量的值-2-用于表达式计算-格式化数字-pi-2f-Π-2代表小数点后两位-f代表为浮点数-数据类型-3-访问字典-eg-person-“name”-”张三”-”age”-20-print-f”姓名-person-‘name’-年龄-person-‘age’-”-中括号的作用-1-创建带元素的列表-空元素也可-2-访问序列元素-同理也可以访问字符串-元组-类似c-数组-eg-fruits-‘apple’-‘banana’-‘orange’-‘grape’-print-fruits-0-‘apple’-第一个元素-print-fruits-1-‘banana’-第二个元素-print-fruits-1-‘grape’-最后一个元素-print-fruits-2-‘orange’-倒数第二个元素-3-修改访问元素-字典值-eg-fruits-‘apple’-‘banana’-‘cherry’-fruits-1-‘blueberry’-print-fruits-‘apple’-‘blueberry’-‘cherry’-4-取出字典中键对应的值-“键名”-一般用get-找不到键会返回None-而不是报错-n-用于换行"><a href="#1-变量名-插入为变量的值-2-用于表达式计算-格式化数字-pi-2f-Π-2代表小数点后两位-f代表为浮点数-数据类型-3-访问字典-eg-person-“name”-”张三”-”age”-20-print-f”姓名-person-‘name’-年龄-person-‘age’-”-中括号的作用-1-创建带元素的列表-空元素也可-2-访问序列元素-同理也可以访问字符串-元组-类似c-数组-eg-fruits-‘apple’-‘banana’-‘orange’-‘grape’-print-fruits-0-‘apple’-第一个元素-print-fruits-1-‘banana’-第二个元素-print-fruits-1-‘grape’-最后一个元素-print-fruits-2-‘orange’-倒数第二个元素-3-修改访问元素-字典值-eg-fruits-‘apple’-‘banana’-‘cherry’-fruits-1-‘blueberry’-print-fruits-‘apple’-‘blueberry’-‘cherry’-4-取出字典中键对应的值-“键名”-一般用get-找不到键会返回None-而不是报错-n-用于换行" class="headerlink" title="  1. {变量名},插入为变量的值  2. 用于表达式计算, 格式化数字{pi:.2f} &#x2F;&#x2F;Π .2代表小数点后两位, f代表为浮点数(数据类型)  **3.**访问字典     eg. person&#x3D;{“name”:”张三”,”age”:20}         print(f”姓名:{person[‘name’]},年龄:{person[‘age’]}”)  ## *中括号的作用  **1.**创建带元素的列表,空元素也可  **2.**访问序列元素   &#x2F;&#x2F;同理也可以访问字符串,元组(类似c++数组)     eg.        fruits &#x3D; [‘apple’, ‘banana’, ‘orange’, ‘grape’]        print(fruits[0])    # ‘apple’ - 第一个元素        print(fruits[1])    # ‘banana’ - 第二个元素        print(fruits[-1])   # ‘grape’ - 最后一个元素        print(fruits[-2])   # ‘orange’ - 倒数第二个元素&#96;  **3.**修改访问元素(字典值)     eg.fruits &#x3D; [‘apple’, ‘banana’, ‘cherry’]        fruits[1] &#x3D; ‘blueberry’        print(fruits)  # [‘apple’, ‘blueberry’, ‘cherry’]  4 取出字典中键对应的值[“键名”]   &#x2F;一般用get(),找不到键会返回None,而不是报错  ## *\n 用于换行"></a>  <strong>1.</strong> {变量名},插入为变量的值<br>  <strong>2.</strong> 用于表达式计算, 格式化数字{pi:.2f} &#x2F;&#x2F;Π .2代表小数点后两位, f代表为浮点数(数据类型)<br>  **3.**访问字典<br>     eg. person&#x3D;{“name”:”张三”,”age”:20}<br>         print(f”姓名:{person[‘name’]},年龄:{person[‘age’]}”)<br>  ## *中括号的作用<br>  **1.**创建带元素的列表,空元素也可<br>  **2.**访问序列元素   &#x2F;&#x2F;同理也可以访问字符串,元组(类似c++数组)<br>     eg.<br>        fruits &#x3D; [‘apple’, ‘banana’, ‘orange’, ‘grape’]<br>        print(fruits[0])    # ‘apple’ - 第一个元素<br>        print(fruits[1])    # ‘banana’ - 第二个元素<br>        print(fruits[-1])   # ‘grape’ - 最后一个元素<br>        print(fruits[-2])   # ‘orange’ - 倒数第二个元素&#96;<br>  **3.**修改访问元素(字典值)<br>     eg.fruits &#x3D; [‘apple’, ‘banana’, ‘cherry’]<br>        fruits[1] &#x3D; ‘blueberry’<br>        print(fruits)  # [‘apple’, ‘blueberry’, ‘cherry’]<br>  <strong>4</strong> 取出字典中键对应的值[“键名”]   &#x2F;一般用get(),找不到键会返回None,而不是报错<br>  ## *\n 用于换行</h2><h2 id="1-定义函数-含参"><a href="#1-定义函数-含参" class="headerlink" title="1.定义函数(含参)"></a>1.定义函数(含参)</h2><p>   def 函数名( 参数  ):<br>      函数体的内容<br>      返回值</p>
+<h2 id="2-默认函数"><a href="#2-默认函数" class="headerlink" title="2.(默认函数)"></a>2.(默认函数)</h2><p>   1.默认参数必须在非参数函数之前<br>   2.默认值只在函数定义时计算一次 &#x2F;&#x2F;用None做默认值更安全,每次调用都创建新列表<br>   3.可以混合使用位置参数和默认参数<br>   4.默认函数本身可以被重新定义</p>
+<h2 id="3-全局or局部变量"><a href="#3-全局or局部变量" class="headerlink" title="3.全局or局部变量"></a>3.全局or局部变量</h2><pre><code>A.全局变量
+  1.在函数外部定义
+  2.在整个模块中可见.
+B.局部变量
+  1.在函数内部定义
+  2.只在函数内部可见
+C.变量作用域优先级LEGB规则
+</code></pre>
+<p>   &#x3D;&#x3D;L&#x3D;&#x3D;ocal -局部作用域<br>   &#x3D;&#x3D;E&#x3D;&#x3D;nclosing -闭包函数作用域<br>   &#x3D;&#x3D;G&#x3D;&#x3D;lobal -全局作用域<br>   &#x3D;&#x3D;B&#x3D;&#x3D;uilt-in -内置作用域<br>    D.常见method<br>    1.global关键字 &#x2F;&#x2F;修改为全局变量<br>    2.使用nonlocal关键字   &#x2F;&#x2F;修改为闭包变量</p>
+<h2 id="4-文件读写"><a href="#4-文件读写" class="headerlink" title="4.文件读写"></a>4.文件读写</h2><pre><code>首先明确
+==文件对象可以存储在变量中,用于操纵文件==
+==文件内容可以存储在变量中,作为字符串处理==
+==文件本身(磁盘上的实体)不能直接存储在变量中==
+**推荐 with 语句,自动开关
+      # 将文件内容存储在变量中
+      with open(&#39;example.txt&#39;, &#39;r&#39;, encoding=&#39;utf-8&#39;) as file:
+      file_content = file.read()    // 文件内容存储在变量 file_content 中
+
+      print(file_content)      // 可以多次使用文件内容
+      print(f&quot;文件长度: &#123;len(file_content)&#125; 字符&quot;)
+
+      # 文件内容可以被修改并写回
+      modified_content = file_content.upper()
+      with open(&#39;example_upper.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as file:
+      file.write(modified_content)
+**基本操作
+      # 将文件对象存储在变量中
+      read_file = open(&#39;input.txt&#39;, &#39;r&#39;, encoding=&#39;utf-8&#39;)    //r和r+模式只能读取已存在的文件,不能创建文件
+      write_file = open(&#39;output.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;)
+
+      # 通过变量操作文件
+      data = read_file.read()          // 从输入文件读取
+      write_file.write(data)           // 写入输出文件
+
+      # 记得关闭文件
+      read_file.close()
+      write_file.close()
+</code></pre>
+<h2 id="表格汇总-’r’-只读-’w’-只写-’a’-追加-’x’-创建-’r-’-读写-’w-’-读写-’a-’-读写追加"><a href="#表格汇总-’r’-只读-’w’-只写-’a’-追加-’x’-创建-’r-’-读写-’w-’-读写-’a-’-读写追加" class="headerlink" title="  ##表格汇总  |’r’|只读|  |’w’|只写|  |’a’|追加|  |’x’|创建|  |’r+’|读写|  |’w+’|读写|  |’a+’|读写追加|"></a>  ##表格汇总<br>  |’r’|只读|<br>  |’w’|只写|<br>  |’a’|追加|<br>  |’x’|创建|<br>  |’r+’|读写|<br>  |’w+’|读写|<br>  |’a+’|读写追加|</h2><h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><h2 id="字典中简单的映射关系"><a href="#字典中简单的映射关系" class="headerlink" title="字典中简单的映射关系"></a>字典中简单的映射关系</h2><p>  eg.<br>        def create_multiple_files():<br>          &#x2F;&#x2F;批量创建多个文件<br>        file_contents &#x3D; {<br>            “readme.txt”: “这是说明文件”,<br>            “config.json”: ‘{“name”: “app”, “version”: “1.0”}’,<br>            “notes.md”: “# 学习笔记\n## Python文件操作”<br>        }</p>
+<pre><code>    for filename, content in file_contents.items():
+        with open(filename, &quot;w&quot;, encoding=&quot;utf-8&quot;) as file:
+            file.write(content)
+        print(f&quot;创建文件: &#123;filename&#125;&quot;)
+</code></pre>
+<ul>
+<li>· ✅ file_contents 字典包含：文件名 → 文件内容 的映射<br>· ✅ filename 变量获取：字典的键（文件名）<br>· ✅ content 变量获取：字典的值（文件内容）<br>· ✅ file.write(content) 中的 content：就是当前循环对应的文件内容<br>  *字典&#x3D;键值对集合</li>
+<li>键(key)–值(value)</li>
+<li>一个键对应一个值</li>
+<li>键是唯一的,值可以重复</li>
+<li>字典名 &#x3D; {<br>键1: 值1,<br>键2: 值2,<br>键3: 值3<br>  }</li>
+</ul>
+<h2 id="字典可以套娃即字典中的字典"><a href="#字典可以套娃即字典中的字典" class="headerlink" title="字典可以套娃即字典中的字典"></a>字典可以套娃即字典中的字典</h2><p>  1.遍历键:<br>          for key in person.keys():<br>            print(key)<br>  2. 遍历值:<br>          for value in person.values():<br>            print(value)<br>  3.同时遍历值和键:<br>          for key, value in person.items():<br>              print(key, “→”, value)</p>
+<h2 id="python中的类-class-类名首字母大写"><a href="#python中的类-class-类名首字母大写" class="headerlink" title="python中的类(class)   &#x2F;&#x2F;类名首字母大写"></a>python中的类(class)   &#x2F;&#x2F;类名首字母大写</h2><pre><code>1.类中的函数,我们统称为method(方法),定义时需要加上self,类似于c++的隐式指针this
+2.def __init__(self,)      //类似与c++的构造函数,负责初始化的
+</code></pre>
+<h2 id="元组与数组"><a href="#元组与数组" class="headerlink" title="元组与数组"></a>元组与数组</h2><pre><code>** 需要list. 来调用     //list储存的是地址,
+**1** 对于元组:元组是一个不可变的对象，赋值后无法更改其值!
+1.排列位置的索引是从0开始,-1是最后一位
+2.append(),从list的最后添加
+3.insert(位置,值)
+4.remove(值),第一次出现的值
+5.a=[0:3] a中的第一位到第三位   //切片
+6.index(value)  //从第一次出现该值找索引
+7.count(value)   //出现该值的次数
+8.sort()  排列,从小到大   //sort(reverse=True)为降序
+</code></pre>
+<h2 id="错误处理try"><a href="#错误处理try" class="headerlink" title="错误处理try"></a>错误处理try</h2><pre><code> 常见结构     
+      try:
+          # 可能引发异常的代码
+          pass
+      except ExceptionType:
+          # 处理特定类型的异常
+          pass
+
+      except AnotherExceptionType:
+          # 处理另一种类型的异常
+          pass
+      else:
+          # 如果没有异常发生，执行这里的代码
+          pass
+      finally:
+          # 无论是否发生异常，都会执行这里的代码
+          pass
+e.g  # 不好的做法
+      try:
+          do_something()
+      except:
+          pass  # 静默忽略所有异常
+
+      # 好的做法
+      try:
+          do_something()
+      except SpecificError as e:
+          logger.error(f&quot;处理SpecificError: &#123;e&#125;&quot;)
+          # 采取适当的恢复措施
+      except AnotherError as e:
+          logger.error(f&quot;处理AnotherError: &#123;e&#125;&quot;)
+          # 采取不同的恢复措施
+</code></pre>
+<h2 id="zip函数的用法"><a href="#zip函数的用法" class="headerlink" title="zip函数的用法"></a>zip函数的用法</h2><pre><code>**1**   # zip()返回的是迭代器对象,不是列表   //只能遍历一次
+**2**   #转化为列表后可以看到所有内容  ==以下情况优先考虑==       //可以遍历多次
+        1.需要重复访问
+        2.需要修改数据
+        3.需要索引或切片操作
+
+1. # 将两个列表对应位置的元素组合
+    names = [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;]
+    ages = [25, 30, 35]
+
+    zipped = zip(names, ages)
+    print(list(zipped))     # [(&#39;Alice&#39;, 25), (&#39;Bob&#39;, 30), (&#39;Charlie&#39;, 35)]  
+2. # 使用 * 操作符可以&quot;解压&quot;zip对象
+    zipped = [(&#39;Alice&#39;, 25), (&#39;Bob&#39;, 30), (&#39;Charlie&#39;, 35)]
+    names, ages = zip(*zipped)
+    print(names)   # (&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;)
+    print(ages)    # (25, 30, 35)
+3. #  同时遍历多个列表
+    e.g  names = [&#39;Alice&#39;, &#39;Bob&#39;, &#39;Charlie&#39;]
+          ages = [25, 30, 35]
+          cities = [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;]
+
+          for name, age, city in zip(names, ages, cities):
+              print(f&quot;&#123;name&#125; is &#123;age&#125; years old and lives in &#123;city&#125;&quot;)
+4. # lambda
+   1. 基本用法
+      lambda 参数:表达式
+      相当于构造一个简单的函数
+5. # map()
+   1. map(function,iterable,...)  
+   2. lterable(可迭代对象)指的是可以逐个返回其元素的对象,常见的包括list tuple(元组) str dic(字典)
+</code></pre>
+<h2 id="pickle模块"><a href="#pickle模块" class="headerlink" title="pickle模块"></a>pickle模块</h2><pre><code>1.基本文件序列化
+2.批量数据处理
+3.智能缓冲系统
+---
+****pickle.load()
+1. 从文件加载对象
+2. 加载各种数据类型
+
+****pickle.dump(A,B)  //A保存到B
+1.保存简单对象到文件
+2.使用不同的协议版本 
+</code></pre>
+<hr>
+<h2 id="开始练手"><a href="#开始练手" class="headerlink" title="开始练手"></a>开始练手</h2><h2 id="积累的知识点"><a href="#积累的知识点" class="headerlink" title="积累的知识点"></a>积累的知识点</h2><p>  1.计数模式（counting pattern）”，核心思想是 “查旧值 + 更新 + 写回”。<br>        eg.    skill_count[skill] &#x3D; skill_count.get(skill, 0) + 1<br>      读取 skill_count 这个字典中键 skill 对应的值；<br>      如果存在，就取出该值；<br>      如果不存在，就用默认值 0；<br>      在这个值基础上加 1；<br>      再把新值写回 skill_count[skill]。<br>  2.<br>  applicants_data &#x3D; [<br>    {<br>        “name”: “张三”,<br>        “score”: 85,<br>        “skills”: [“Python”]<br>    },<br>    {<br>        “name”: “李四”,<br>        “score”: 90,<br>        “skills”: [“C++”, “Java”]<br>    }<br>  ]<br>  for person in applicants_data:<br>        图解:<br>        applicants_data (list)<br>        │<br>        ├── [0] ── person ── dict<br>        │       ├── “name”: “张三”<br>        │       ├── “score”: 85<br>        │       └── “skills”: [“Python”]<br>        │<br>        └── [1] ── person ── dict<br>                ├── “name”: “李四”<br>                ├── “score”: 90<br>                └── “skills”: [“C++”, “Java”]<br>  3.isinstance(变量, 类型)<br>    判断变量是不是指定类型<br>    isinstance(score, (int, float))  &#x2F;&#x2F;支持多个类型检查</p>
+<h2 id="1-week"><a href="#1-week" class="headerlink" title="1 week"></a>1 week</h2><h2 id="args位置可变参数"><a href="#args位置可变参数" class="headerlink" title="*args位置可变参数"></a>*args位置可变参数</h2><pre><code>1.args 是一个 元组（tuple），里面存放所有的位置参数。你可以像普通元组那样操作它:    //请注意，args 只是一个名称。您不需要使用名称
+2. e.g def add(*args):
+          result=0
+          for x in args:
+              result+=x
+          return result
+</code></pre>
+<h2 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h2><pre><code>1.kwargs 是一个 字典（dict），保存了所有的“键=值”形式的参数,可以像字典一样访问
+2.e.g      def show_info(**kwargs):
+            for key, value in kwargs.items():
+                print(f&quot;&#123;key&#125;: &#123;value&#125;&quot;)
+
+            show_info(name=&quot;小明&quot;, score=90, subject=&quot;数学&quot;)
+**定义函数参数时的顺序**:
+  位置参数 → 默认参数 → *args → **kwargs
+</code></pre>
+<h2 id="decorator"><a href="#decorator" class="headerlink" title="decorator:"></a>decorator:</h2><pre><code>def 装饰器名(被装饰的函数):
+  def wrapper(*args, **kwargs):
+      # 1️⃣ 执行函数前的代码
+      result = 被装饰的函数(*args, **kwargs)
+      # 2️⃣ 执行函数后的代码
+      return result
+  return wrapper
+@装饰器名
+def 被装饰函数():
+</code></pre>
+<p>  相当于:被装饰函数 &#x3D; 装饰器名(被装饰函数)</p>
+<h2 id="异步编程-async-await"><a href="#异步编程-async-await" class="headerlink" title="异步编程(async,await)"></a>异步编程(async,await)</h2><pre><code>  Asyncio 是 Python 用于异步编程的库，专门用来处理耗时的 IO 操作，比如网络请求、文件读写、数据库查询等 
+(1)1.定义协程函数
+  2.包装协程为任务
+  3.建立事件循环
+(2)await的用法
+  1.暂停当前的协程
+  2.包装await后的协程为任务
+  3.获取await后的协程结果
+(3)如何写一个协程
+   e.g
+    import asyncio
+    async def worker():
+        print(&quot;开始&quot;)
+        await asyncio.sleep(1)
+        print(&quot;结束&quot;)
+
+    async def main():
+        # 包装协程
+        task = asyncio.create_task(worker())
+
+        # 等待任务结束
+        await task
+
+    asyncio.run(main())   //启动事件循环
+  (4)返回协程结果
+  await task(最简单)
+  asyncio.gather()获取所有结果,顺序与传入顺序一样
+  asyncio.as_completed()  //立即返回结果无需等待
+  (5)其他asyncio的异步库
+  1.aiohttp   //网络连接
+  2.aiofiles   //文件
+</code></pre>
+<h2 id="if-name-“main“-是-Python-程序的入口判断，用来区分："><a href="#if-name-“main“-是-Python-程序的入口判断，用来区分：" class="headerlink" title="if name &#x3D;&#x3D; “main“: 是 Python 程序的入口判断，用来区分："></a>if <strong>name</strong> &#x3D;&#x3D; “<strong>main</strong>“: 是 Python 程序的入口判断，用来区分：</h2><pre><code>    当前文件是被直接运行,就执行if后面的代码
+    还是被别的文件 import 导入
+</code></pre>
+<hr>
+<h2 id="关于http"><a href="#关于http" class="headerlink" title="关于http"></a>关于http</h2><pre><code>1.请求方法
+  | 方法       | 用途         |
+  | -------- | ---------- |
+  | `GET`    | 获取资源（无副作用） |
+  | `POST`   | 创建资源       |
+  | `PUT`    | 替换资源       |
+  | `PATCH`  | 局部更新资源     |
+  | `DELETE` | 删除资源       |
+2.| 状态码                        
+  | 场景             |
+  | --------------------------- | -------------- |
+  | `200 OK`                    | 一切正常           |
+  | `201 Created`               | 创建成功           |
+  | `400 Bad Request`           | 参数错误           |
+  | `401 Unauthorized`          | 未认证            |
+  | `403 Forbidden`             | 不允许访问          |
+  | `404 Not Found`             | 资源不存在          |
+  | `422 Unprocessable Entity`  | FastAPI 用于校验失败 |
+  | `500 Internal Server Error` | 服务端异常          |
+3.请求结构
+  POST /login HTTP/1.1
+  Host: example.com
+  Content-Type: application/json
+
+  &#123;&quot;username&quot;: &quot;aa&quot;, &quot;password&quot;: &quot;bb&quot;&#125;
+</code></pre>
+<hr>
+<h2 id="万事开头难-不要乱装东西-血的教训"><a href="#万事开头难-不要乱装东西-血的教训" class="headerlink" title="万事开头难,不要乱装东西(血的教训)"></a>万事开头难,不要乱装东西(血的教训)</h2><hr>
+<h2 id="RESTful的路径-URL-的-设计原则"><a href="#RESTful的路径-URL-的-设计原则" class="headerlink" title="RESTful的路径(URL)的  设计原则"></a>RESTful的路径(URL)的  设计原则</h2><p>-使用名词,不用动词<br> e.g  GET  &#x2F;api&#x2F;user  #获取所有用户<br>-用复数形式表示资源合集(约定俗成)<br> e.g  POST &#x2F;api&#x2F;users #嗨，请在你的用户数据库里，为我添加一个新成员<br>-层级关系表达关联<br> e.g  GET  &#x2F;api&#x2F;users&#x2F;1&#x2F;posts  #用户1的所有数据</p>
+<h2 id="RESTful设计风格详解"><a href="#RESTful设计风格详解" class="headerlink" title="RESTful设计风格详解"></a>RESTful设计风格详解</h2><ol>
+<li>RESTful 的核心思想<br>-资源（Resource）是核心：一切数据（如用户、文章、订单）都视为资源。<br>-每个资源都有一个唯一的 URI（统一资源标识符，通常是一个 URL 路径）<br>-使用标准 HTTP 方法（GET&#x2F;POST&#x2F;PUT&#x2F;DELETE）操作资源<br>-无状态（Stateless）：每次请求都应该包含足够的信息，服务器不保存客户端状态<br>-可缓存、分层系统、统一接口等（更高级特性） </li>
+<li>RESTful中的资源是什么:<br>-用户(User)<br>-文章(Articles)<br>-订单(Order)<br>-商品(Products)</li>
+</ol>
+<h2 id="如何用Query参数-查询参数"><a href="#如何用Query参数-查询参数" class="headerlink" title="如何用Query参数(查询参数)"></a>如何用Query参数(查询参数)</h2><ol>
+<li>基本定义:Query 参数是放在 URL 问号（?）后面的一组键值对，用于向服务器传递可选的、非敏感的参数信息，常用于过滤、分页、排序、搜索等<br>e.g 假设我们有一个获取用户列表的 API：<br>   GET &#x2F;api&#x2F;users<br>   你想添加如下查询条件：<br> 只获取状态为 active 的用户<br> 每页 10 条<br> 第 2 页<br> 那么 URL 应该写成：<br>   GET &#x2F;api&#x2F;users?status&#x3D;active&amp;page&#x3D;2&amp;per_page&#x3D;10<br>  2.# 在不同场景下如何加 Query 参数<table>
+<thead>
+<tr>
+<th>工具&#x2F;语言</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>浏览器 &#x2F; 直接访问</strong></td>
+<td>在地址栏输入：<br><code>https://api.example.com/users?name=Alice&amp;age=20</code></td>
+</tr>
+<tr>
+<td><strong>cURL</strong></td>
+<td><code>bash&lt;br&gt;curl &quot;https://api.example.com/users?status=active&amp;page=2&quot;&lt;br&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Postman</strong></td>
+<td>在请求的 Params 标签页中添加键值对，Postman 会自动拼接到 URL</td>
+</tr>
+<tr>
+<td><strong>Python (requests)</strong></td>
+<td><code>python&lt;br&gt;import requests&lt;br&gt;params = &#123;&quot;status&quot;: &quot;active&quot;, &quot;page&quot;: 2&#125;&lt;br&gt;response = requests.get(&quot;https://api.example.com/users&quot;, params=params)&lt;br&gt;</code></td>
+</tr>
+<tr>
+<td><strong>JavaScript (fetch)</strong></td>
+<td><code>javascript&lt;br&gt;fetch(&quot;https://api.example.com/users?status=active&amp;page=2&quot;)&lt;br&gt;</code></td>
+</tr>
+</tbody></table>
+   ✔ <strong>注意</strong>：Query 参数用于 GET 请求居多，但技术上其他方法也可以带，只是不常见</li>
+</ol>
+<p> <strong>如何写好 JSON Body</strong><br>  JSON Body 是发给 API 的请求数据，用于 POST &#x2F; PUT 等操作。</p>
+<pre><code>基本语法:
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;value&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">键必须用双引号 <span class="string">&quot; &quot;</span></span><br><span class="line">值可以是：</span><br><span class="line">* 字符串 `<span class="string">&quot;text&quot;</span>`</span><br><span class="line">* 数字 `<span class="number">123</span>`</span><br><span class="line">* 布尔 `<span class="literal"><span class="keyword">true</span></span> / <span class="literal"><span class="keyword">false</span></span>`</span><br><span class="line">* 数组 `<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">]</span>`</span><br><span class="line">* 对象 `<span class="punctuation">&#123;</span> <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Tom&quot;</span> <span class="punctuation">&#125;</span>`</span><br><span class="line"></span><br><span class="line">e.g：</span><br><span class="line">json</span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Apple&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;price&quot;</span><span class="punctuation">:</span> <span class="number">3.5</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line">## JSON Body 必须符合 API 的 Pydantic 模型</span><br><span class="line"></span><br><span class="line">例如你的 FastAPI 模型：</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">class Item(BaseModel)<span class="punctuation">:</span></span><br><span class="line">    name<span class="punctuation">:</span> str</span><br><span class="line">    price<span class="punctuation">:</span> float</span><br></pre></td></tr></table></figure>
+
+那么 JSON Body 必须写成：
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Apple&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;price&quot;</span><span class="punctuation">:</span> <span class="number">3.5</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+如果字段缺失、类型不对，FastAPI 会返回：
+422 Unprocessable Entity
+</code></pre>
+<h2 id="数据多时也可以写嵌套结构："><a href="#数据多时也可以写嵌套结构：" class="headerlink" title="数据多时也可以写嵌套结构："></a>数据多时也可以写嵌套结构：</h2><pre><code>&#123;
+  &quot;order_id&quot;: 10,
+  &quot;customer&quot;: &#123;
+    &quot;name&quot;: &quot;Alice&quot;,
+    &quot;email&quot;: &quot;alice@example.com&quot;
+  &#125;,
+  &quot;items&quot;: [
+    &#123; &quot;name&quot;: &quot;Apple&quot;, &quot;price&quot;: 3.5 &#125;,
+    &#123; &quot;name&quot;: &quot;Banana&quot;, &quot;price&quot;: 2.0 &#125;
+  ]
+&#125;
+</code></pre>
+<h2 id="记住"><a href="#记住" class="headerlink" title="记住"></a>记住</h2><pre><code>* 必须用 `&#123;&#125;` 包住
+* key 要用 `&quot;双引号&quot;`
+* 值类型必须正确（string / number / boolean / object / array）
+* 不要多逗号
+* 必须符合 FastAPI 对应模型
+</code></pre>
+<hr>
+<h2 id="关于requests库的几点"><a href="#关于requests库的几点" class="headerlink" title="关于requests库的几点:"></a>关于requests库的几点:</h2><p>  1.是python中最流行,最易用的HTTP请求库,用于发送HTTP请求(GET,POST) 与Web服务(api,网站)交互,适合爬虫,接口调用,数据获取等场景<br>  2.语法<br>    (1). GET:requests.get(url)<br>    (2). data &#x3D; {“name”: “Tom”, “age”: 20}<br>        POST:requests.post(url.json&#x3D;data) &#x2F;&#x2F;json&#x3D;data 会自动设置成Content-Type: application&#x2F;json<br>    (3). response.status_code(获取状态码)<br>    (4). response.json(将json文件响应解析为python字典)<br>    (5).  GET 请求带查询参数:<br>            params &#x3D; {“name”: “Alice”, “age”: 25}<br>            response &#x3D; requests.get(“<a target="_blank" rel="noopener" href="https://httpbin.org/get">https://httpbin.org/get</a>“, params&#x3D;params)<br>            print(“完整 URL:”, response.url)  # 自动拼接参数&#x2F;&#x2F;params&#x3D;params,requests 会自动将这个字典转换为 URL 的查询字符串（即 ?name&#x3D;Alice&amp;age&#x3D;25），并拼接到 URL 后面。</p>
+<h2 id="关于typing模块"><a href="#关于typing模块" class="headerlink" title="关于typing模块:"></a>关于typing模块:</h2><pre><code>Python 提供的类型提示工具库，里面包含了很多用于静态类型检查的类型构造器（如 List, Dict, Tuple, Union 等）
+</code></pre>
+<h2 id="关于Union模型"><a href="#关于Union模型" class="headerlink" title="关于Union模型:"></a>关于Union模型:</h2><pre><code>当你希望函数参数或返回值可以接受多种不同类型时就会用到 Union。   
+</code></pre>
+<h2 id="Fastapi"><a href="#Fastapi" class="headerlink" title="Fastapi"></a>Fastapi</h2><p>  &#x3D;&#x3D;pip install fastapi[all]&#x3D;&#x3D; 安装必要的库</p>
+<p>  from fastapi import FastAPI: 导入 FastAPI 的核心类，用于创建应用程序实例。</p>
+<p>  app &#x3D; FastAPI()<br>      app: 这是 FastAPI 的主要实例。所有的 API 路由（路径）和配置都将挂载在这个对象上。<br>        在运行服务器时（例如使用 Uvicorn），你会引用这个 app 对象。</p>
+<p>  (“&#x2F;“): 指定请求的路径（URL），这里是根目录</p>
+<ol>
+<li><p>基本骨架<br>app&#x2F;<br>├── main.py<br>├── routers&#x2F;<br>│   ├── users.py<br>│   └── items.py</p>
+</li>
+<li><p>运行:<br> uvicorn main:app –reload</p>
+</li>
+<li><p>FastAPI 使用Python装饰器语法 来注册接口<br> e.g :@app.get(“&#x2F;items”)</p>
+<pre><code>  def read_items():
+     
+     return &#123;&quot;items&quot;: []&#125;
+</code></pre>
+<p> 意思是 :@app.get(“&#x2F;items”) 是装饰器</p>
+<pre><code>     表示这个函数是一个 处理 GET /items 请求的函数
+     
+     每个装饰器对应一个 HTTP 方法
+</code></pre>
+</li>
+<li><p>常用的decorator:</p>
+<ol>
+<li>@app.get(“&#x2F;path”)</li>
+<li>@app.post(“&#x2F;path”)</li>
+<li>@app.put(“&#x2F;path”)</li>
+<li>@app.patch(“&#x2F;path”)</li>
+<li>@app.delete(“&#x2F;path”)</li>
+</ol>
+</li>
+<li><p>定义带参数的路径:</p>
+<p>e.g: @app.get(“&#x2F;items&#x2F;{item_id}”)<br> def read_item(item_id: int, q: Union[str, None] &#x3D; None):<br>     return {“item_id”: item_id, “q”: q}</p>
+</li>
+</ol>
+<pre><code>A. 路径参数 (Path Parameter)
+  
+  路由: /items/&#123;item_id&#125; 中的 &#123;item_id&#125; 是一个占位符。
+  参数: 函数参数 item_id: int 与路径中的占位符名称一致。
+  类型校验: : int 是 Python 的类型提示。FastAPI 利用它进行自动校验：
+  如果你访问 /items/5，FastAPI 会把 5 转换成整数传递给函数。
+  如果你访问 /items/foo，FastAPI 会自动返回一个清晰的错误信息（因为 &quot;foo&quot; 不是整数）。
+
+B. 查询参数 (Query Parameter)
+
+定义: 参数 q 出现在函数定义中，但没有出现在路径装饰器 /items/&#123;item_id&#125; 中。因此，FastAPI 自动将其识别为查询参数（URL 中 ? 后面的部分）。
+类型: Union[str, None] = None
+  这意味着 q 可以是字符串，也可以是 None。
+  = None 设置了默认值。这意味着这个参数是可选的。
+
+用法示例:
+/items/5?q=something -&gt; item_id 是 5, q 是 &quot;something&quot;。
+/items/5 -&gt; item_id 是 5, q 是 None
+</code></pre>
+<hr>
+<h2 id="关于pydantic模型"><a href="#关于pydantic模型" class="headerlink" title="关于pydantic模型"></a>关于pydantic模型</h2><p>  Pydantic 模型 是 Python 库 Pydantic 的核心概念。简单来说，它是一个用来定义数据结构、验证数据和转换数据的类。</p>
+<p>  在 FastAPI 中，Pydantic 模型扮演着至关重要的角色，它负责处理请求体（Request Body）和响应体（Response Body）。</p>
+<ol>
+<li><p>核心定义:</p>
+<ol>
+<li><p>要创建一个 Pydantic 模型，你需要定义一个继承自 BaseModel 的类，并声明字段及其类型。</p>
+</li>
+<li><p>代码示例<br>e.g:<br>from pydantic import BaseModel<br>from typing import Union</p>
+<h1 id="定义一个-Pydantic-模型"><a href="#定义一个-Pydantic-模型" class="headerlink" title="定义一个 Pydantic 模型"></a>定义一个 Pydantic 模型</h1><pre><code>    ///完整代码:
+    from fastapi import FastAPI
+    from pydantic import BaseModel, EmailStr
+
+    app = FastAPI()
+
+    # 请求模型：客户端传入的数据
+    class UserCreateRequest(BaseModel):
+        username: str
+        email: EmailStr
+        password: str
+
+    # 响应模型：返回给客户端的数据
+    class UserResponse(BaseModel):
+        id: int
+        username: str
+        email: EmailStr
+
+    @app.post(&quot;/users&quot;, response_model=UserResponse)
+    def create_user(user: UserCreateRequest):
+        new_user = &#123;
+            &quot;id&quot;: 1,
+            &quot;username&quot;: user.username,  # 修正这里
+            &quot;email&quot;: user.email
+        &#125;
+        return new_user
+</code></pre>
+</li>
+<li><p>Pydantic 模型的三大功能:<br>当你使用上面这个 Item 类来接收数据时，Pydantic 会自动完成以下工作：<br>   A. 数据验证 (Validation)<br> 它会检查传入的数据是否符合定义的类型。</p>
+<ol>
+<li>如果 price 传入的是一个无法转为数字的字符串（如 “hello”），Pydantic 会报错。</li>
+<li>如果缺少了必填字段 name，Pydantic 也会报错。</li>
+</ol>
+</li>
+</ol>
+<p>   B. 数据转换&#x2F;解析 (Parsing)</p>
+<pre><code> 3. 如果你给 price 传入字符串 &quot;10.5&quot;，Pydantic 会自动把它转换成浮点数 10.5。
+ 4. 如果你给 is_offer 传入字符串 &quot;True&quot; 或 &quot;on&quot;，它会自动转换成布尔值 True。
+</code></pre>
+<p>   C. JSON Schema 生成<br>     FastAPI 使用 Pydantic 模型来自动生成 API 文档（Swagger UI）。<br>     它会告诉前端开发者：“这个接口需要一个对象，必须包含字符串类型的 name 和浮点数类型的 price”。</p>
+</li>
+<li><p>定义请求模型(UserCreateRequest)  &#x2F;&#x2F;请求模型用于接收客户端发送给 API 的数据（通常是 POST、PUT 请求的 JSON Body）。</p>
+<ol>
+<li><p>BaseModel 是所有 Pydantic 模型的基类</p>
+</li>
+<li><p>字段类型用 Python 的类型注解（如 str, int, EmailStr）</p>
+</li>
+<li><p>Pydantic 会自动校验类型并在错误时抛出异常<br>   e.g:</p>
+</li>
+</ol>
+<pre><code>from pydantic import BaseModel, EmailStr
+
+class UserCreateRequest(BaseModel):         
+  username: str
+  email: EmailStr
+  password: str
+  1. BaseModel 是所有 Pydantic 模型的基类
+
+  2. 字段类型用 Python 的类型注解（如 str, int, EmailStr）
+
+  3. Pydantic 会自动校验类型并在错误时抛出异常
+    
+    将模型类作为函数参数的类型提示
+</code></pre>
+</li>
+</ol>
+<pre><code>3. 定义响应模型(UserResponse)        
+   接上:
+    
+   ///
+    class UserResponse(BaseModel):
+      id: int
+      username: str
+      email: EmailStr
+    @app.post(&quot;/users&quot;, response_model=UserResponse) 
+          
+       # 1. @app.post(&quot;/users&quot;)：告诉 FastAPI，当客户端发起 POST 请求到 /users 路径时，就调用下面的函数。
+       # 2.response_model=UserResponse：规定返回的数据必须符合 UserResponse 模型的结构和类型，FastAPI 会自动校验并过滤掉多余字段。
+    
+    def create_user(user: UserCreateRequest): 
+      
+       # 发生了什么:
+       1. 参数 user 类型是 UserCreateRequest（一个 Pydantic 模型）。
+
+       2. FastAPI 会自动把客户端传来的 JSON 请求体解析成这个模型对象，并进行类型校验。
+
+       3. 如果请求体缺少字段或类型不匹配，会直接返回 422 错误。
+          
+       # 模拟数据库保存 (实战中会用MySQL)
+    new_user = &#123; 
+      &quot;id&quot;: 1, 
+      &quot;username&quot;: 
+      user.username,     
+      &quot;email&quot;: user.email 
+    &#125; 
+       # username 和 email 来自请求体
+    return new_user
+            
+       # 1.FastAPI 会把这个字典转换成 UserResponse 模型对象。
+
+       # 2. 如果字典里有多余字段（比如密码），会被自动过滤掉。
+
+       # 3. 最终返回给客户端的是一个 JSON 响应，结构严格符合 UserResponse。
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">M2artiD</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/">http://example.com/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">M2artiD</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习,</a></div><div class="post-share"><div class="social-share" data-image="/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/12/06/hello-world/" title="Hello World"><img class="cover" src="/images/cb6e641906b1329bed1296382d0338e9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Hello World</div></div><div class="info-2"><div class="info-item-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">M2artiD</div><div class="author-info-description">欢迎来到M2artiD的个人博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/M2artiD" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:qiyangxiao@hotamil.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%98%AF%E5%AD%A6%E4%B9%A0Java-%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%80%80%E6%8F%A3%E7%9D%80%E7%B4%A7%E5%BC%A0%E5%92%8C%E6%BF%80%E5%8A%A8%E7%9A%84%E5%BF%83%E6%83%85-%E8%B8%8F%E4%B8%8A%E4%BA%86%E8%BF%99%E6%9D%A1%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%91%98%E7%9A%84%E9%81%93%E8%B7%AF-%E7%AC%91"><span class="toc-number">1.</span> <span class="toc-text">今天是学习Java 的第一天,怀揣着紧张和激动的心情,踏上了这条后端开发员的道路(笑)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E6%B2%B9"><span class="toc-number">2.</span> <span class="toc-text">加油</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E7%A7%91%E5%B0%8F%E7%9F%A5%E8%AF%86"><span class="toc-number">3.</span> <span class="toc-text">预科小知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BDJDK"><span class="toc-number">4.</span> <span class="toc-text">卸载JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK"><span class="toc-number">5.</span> <span class="toc-text">安装JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%97%E4%BD%A0%E4%BD%A0%E5%91%80-%E7%AB%8B%E5%88%BB%E5%88%87%E6%8D%A2%E4%B8%BApython%E5%BD%A2%E6%80%81"><span class="toc-number">6.</span> <span class="toc-text">骗你你呀.立刻切换为python形态!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8Epython"><span class="toc-number">7.</span> <span class="toc-text">基于python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-1"><span class="toc-number">8.</span> <span class="toc-text">Day 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8A%B1%E6%8B%AC%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">9.</span> <span class="toc-text">*花括号的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8F%98%E9%87%8F%E5%90%8D-%E6%8F%92%E5%85%A5%E4%B8%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC-2-%E7%94%A8%E4%BA%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%A1%E7%AE%97-%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%95%B0%E5%AD%97-pi-2f-%CE%A0-2%E4%BB%A3%E8%A1%A8%E5%B0%8F%E6%95%B0%E7%82%B9%E5%90%8E%E4%B8%A4%E4%BD%8D-f%E4%BB%A3%E8%A1%A8%E4%B8%BA%E6%B5%AE%E7%82%B9%E6%95%B0-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-3-%E8%AE%BF%E9%97%AE%E5%AD%97%E5%85%B8-eg-person-%E2%80%9Cname%E2%80%9D-%E2%80%9D%E5%BC%A0%E4%B8%89%E2%80%9D-%E2%80%9Dage%E2%80%9D-20-print-f%E2%80%9D%E5%A7%93%E5%90%8D-person-%E2%80%98name%E2%80%99-%E5%B9%B4%E9%BE%84-person-%E2%80%98age%E2%80%99-%E2%80%9D-%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8-1-%E5%88%9B%E5%BB%BA%E5%B8%A6%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%97%E8%A1%A8-%E7%A9%BA%E5%85%83%E7%B4%A0%E4%B9%9F%E5%8F%AF-2-%E8%AE%BF%E9%97%AE%E5%BA%8F%E5%88%97%E5%85%83%E7%B4%A0-%E5%90%8C%E7%90%86%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%85%83%E7%BB%84-%E7%B1%BB%E4%BC%BCc-%E6%95%B0%E7%BB%84-eg-fruits-%E2%80%98apple%E2%80%99-%E2%80%98banana%E2%80%99-%E2%80%98orange%E2%80%99-%E2%80%98grape%E2%80%99-print-fruits-0-%E2%80%98apple%E2%80%99-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0-print-fruits-1-%E2%80%98banana%E2%80%99-%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%83%E7%B4%A0-print-fruits-1-%E2%80%98grape%E2%80%99-%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0-print-fruits-2-%E2%80%98orange%E2%80%99-%E5%80%92%E6%95%B0%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%85%83%E7%B4%A0-3-%E4%BF%AE%E6%94%B9%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0-%E5%AD%97%E5%85%B8%E5%80%BC-eg-fruits-%E2%80%98apple%E2%80%99-%E2%80%98banana%E2%80%99-%E2%80%98cherry%E2%80%99-fruits-1-%E2%80%98blueberry%E2%80%99-print-fruits-%E2%80%98apple%E2%80%99-%E2%80%98blueberry%E2%80%99-%E2%80%98cherry%E2%80%99-4-%E5%8F%96%E5%87%BA%E5%AD%97%E5%85%B8%E4%B8%AD%E9%94%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E5%80%BC-%E2%80%9C%E9%94%AE%E5%90%8D%E2%80%9D-%E4%B8%80%E8%88%AC%E7%94%A8get-%E6%89%BE%E4%B8%8D%E5%88%B0%E9%94%AE%E4%BC%9A%E8%BF%94%E5%9B%9ENone-%E8%80%8C%E4%B8%8D%E6%98%AF%E6%8A%A5%E9%94%99-n-%E7%94%A8%E4%BA%8E%E6%8D%A2%E8%A1%8C"><span class="toc-number">10.</span> <span class="toc-text">  1. {变量名},插入为变量的值  2. 用于表达式计算, 格式化数字{pi:.2f} &#x2F;&#x2F;Π .2代表小数点后两位, f代表为浮点数(数据类型)  **3.**访问字典     eg. person&#x3D;{“name”:”张三”,”age”:20}         print(f”姓名:{person[‘name’]},年龄:{person[‘age’]}”)  ## *中括号的作用  **1.**创建带元素的列表,空元素也可  **2.**访问序列元素   &#x2F;&#x2F;同理也可以访问字符串,元组(类似c++数组)     eg.        fruits &#x3D; [‘apple’, ‘banana’, ‘orange’, ‘grape’]        print(fruits[0])    # ‘apple’ - 第一个元素        print(fruits[1])    # ‘banana’ - 第二个元素        print(fruits[-1])   # ‘grape’ - 最后一个元素        print(fruits[-2])   # ‘orange’ - 倒数第二个元素&#96;  **3.**修改访问元素(字典值)     eg.fruits &#x3D; [‘apple’, ‘banana’, ‘cherry’]        fruits[1] &#x3D; ‘blueberry’        print(fruits)  # [‘apple’, ‘blueberry’, ‘cherry’]  4 取出字典中键对应的值[“键名”]   &#x2F;一般用get(),找不到键会返回None,而不是报错  ## *\n 用于换行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0-%E5%90%AB%E5%8F%82"><span class="toc-number">11.</span> <span class="toc-text">1.定义函数(含参)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%BB%98%E8%AE%A4%E5%87%BD%E6%95%B0"><span class="toc-number">12.</span> <span class="toc-text">2.(默认函数)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%85%A8%E5%B1%80or%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">13.</span> <span class="toc-text">3.全局or局部变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="toc-number">14.</span> <span class="toc-text">4.文件读写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%B1%87%E6%80%BB-%E2%80%99r%E2%80%99-%E5%8F%AA%E8%AF%BB-%E2%80%99w%E2%80%99-%E5%8F%AA%E5%86%99-%E2%80%99a%E2%80%99-%E8%BF%BD%E5%8A%A0-%E2%80%99x%E2%80%99-%E5%88%9B%E5%BB%BA-%E2%80%99r-%E2%80%99-%E8%AF%BB%E5%86%99-%E2%80%99w-%E2%80%99-%E8%AF%BB%E5%86%99-%E2%80%99a-%E2%80%99-%E8%AF%BB%E5%86%99%E8%BF%BD%E5%8A%A0"><span class="toc-number">15.</span> <span class="toc-text">  ##表格汇总  |’r’|只读|  |’w’|只写|  |’a’|追加|  |’x’|创建|  |’r+’|读写|  |’w+’|读写|  |’a+’|读写追加|</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day2"><span class="toc-number">16.</span> <span class="toc-text">Day2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E4%B8%AD%E7%AE%80%E5%8D%95%E7%9A%84%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB"><span class="toc-number">17.</span> <span class="toc-text">字典中简单的映射关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%8F%AF%E4%BB%A5%E5%A5%97%E5%A8%83%E5%8D%B3%E5%AD%97%E5%85%B8%E4%B8%AD%E7%9A%84%E5%AD%97%E5%85%B8"><span class="toc-number">18.</span> <span class="toc-text">字典可以套娃即字典中的字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%AD%E7%9A%84%E7%B1%BB-class-%E7%B1%BB%E5%90%8D%E9%A6%96%E5%AD%97%E6%AF%8D%E5%A4%A7%E5%86%99"><span class="toc-number">19.</span> <span class="toc-text">python中的类(class)   &#x2F;&#x2F;类名首字母大写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84"><span class="toc-number">20.</span> <span class="toc-text">元组与数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86try"><span class="toc-number">21.</span> <span class="toc-text">错误处理try</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zip%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">22.</span> <span class="toc-text">zip函数的用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pickle%E6%A8%A1%E5%9D%97"><span class="toc-number">23.</span> <span class="toc-text">pickle模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E7%BB%83%E6%89%8B"><span class="toc-number">24.</span> <span class="toc-text">开始练手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%AF%E7%B4%AF%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">25.</span> <span class="toc-text">积累的知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-week"><span class="toc-number">26.</span> <span class="toc-text">1 week</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#args%E4%BD%8D%E7%BD%AE%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-number">27.</span> <span class="toc-text">*args位置可变参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kwargs"><span class="toc-number">28.</span> <span class="toc-text">**kwargs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#decorator"><span class="toc-number">29.</span> <span class="toc-text">decorator:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B-async-await"><span class="toc-number">30.</span> <span class="toc-text">异步编程(async,await)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#if-name-%E2%80%9Cmain%E2%80%9C-%E6%98%AF-Python-%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3%E5%88%A4%E6%96%AD%EF%BC%8C%E7%94%A8%E6%9D%A5%E5%8C%BA%E5%88%86%EF%BC%9A"><span class="toc-number">31.</span> <span class="toc-text">if name &#x3D;&#x3D; “main“: 是 Python 程序的入口判断，用来区分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Ehttp"><span class="toc-number">32.</span> <span class="toc-text">关于http</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%87%E4%BA%8B%E5%BC%80%E5%A4%B4%E9%9A%BE-%E4%B8%8D%E8%A6%81%E4%B9%B1%E8%A3%85%E4%B8%9C%E8%A5%BF-%E8%A1%80%E7%9A%84%E6%95%99%E8%AE%AD"><span class="toc-number">33.</span> <span class="toc-text">万事开头难,不要乱装东西(血的教训)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RESTful%E7%9A%84%E8%B7%AF%E5%BE%84-URL-%E7%9A%84-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-number">34.</span> <span class="toc-text">RESTful的路径(URL)的  设计原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RESTful%E8%AE%BE%E8%AE%A1%E9%A3%8E%E6%A0%BC%E8%AF%A6%E8%A7%A3"><span class="toc-number">35.</span> <span class="toc-text">RESTful设计风格详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8Query%E5%8F%82%E6%95%B0-%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0"><span class="toc-number">36.</span> <span class="toc-text">如何用Query参数(查询参数)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%9A%E6%97%B6%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%86%99%E5%B5%8C%E5%A5%97%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-number">37.</span> <span class="toc-text">数据多时也可以写嵌套结构：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E4%BD%8F"><span class="toc-number">38.</span> <span class="toc-text">记住</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Erequests%E5%BA%93%E7%9A%84%E5%87%A0%E7%82%B9"><span class="toc-number">39.</span> <span class="toc-text">关于requests库的几点:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Etyping%E6%A8%A1%E5%9D%97"><span class="toc-number">40.</span> <span class="toc-text">关于typing模块:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8EUnion%E6%A8%A1%E5%9E%8B"><span class="toc-number">41.</span> <span class="toc-text">关于Union模型:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fastapi"><span class="toc-number">42.</span> <span class="toc-text">Fastapi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8Epydantic%E6%A8%A1%E5%9E%8B"><span class="toc-number">43.</span> <span class="toc-text">关于pydantic模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA-Pydantic-%E6%A8%A1%E5%9E%8B"><span class="toc-number"></span> <span class="toc-text">定义一个 Pydantic 模型</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/" title="我的后端之路"><img src="/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的后端之路"/></a><div class="content"><a class="title" href="/2025/12/07/%E6%88%91%E7%9A%84%E5%90%8E%E7%AB%AF%E4%B9%8B%E8%B7%AF/" title="我的后端之路">我的后端之路</a><time datetime="2025-12-07T13:10:01.000Z" title="发表于 2025-12-07 21:10:01">2025-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/06/hello-world/" title="Hello World"><img src="/images/cb6e641906b1329bed1296382d0338e9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2025/12/06/hello-world/" title="Hello World">Hello World</a><time datetime="2025-12-06T14:35:42.039Z" title="发表于 2025-12-06 22:35:42">2025-12-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章"><img src="/images/ed6f90efb5fa17baa7a307739ddd1ccf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一篇文章"/></a><div class="content"><a class="title" href="/2025/12/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="我的第一篇文章">我的第一篇文章</a><time datetime="2025-12-06T13:01:35.000Z" title="发表于 2025-12-06 21:01:35">2025-12-06</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/images/1cd9d624b5f984b9bd338b4fa2e384fd.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By M2artiD</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3-b2"></script><script src="/js/main.js?v=5.5.3-b2"></script><div class="js-pjax"></div></div></body></html>
